@@ -1,0 +1,16 @@
+services:
+ rest-order-service:
+  build: ./rest-order-service
+  ports: ["8081:8080"]
+ grpc-order-service:
+  build: ./grpc-order-service
+  ports: ["9090:9090"]
+ graphql-order-service:
+  build: ./graphql-order-service
+  ports: ["8083:8080"]
+ unified-api-client:
+  build: ./unified-api-client
+  depends_on:
+   - rest-order-service
+   - grpc-order-service
+   - graphql-order-service
