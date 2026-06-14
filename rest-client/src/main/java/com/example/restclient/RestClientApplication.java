@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.*;
 
 @SpringBootApplication
 public class RestClientApplication {
+ 
  public static void main(String[] a) {
   SpringApplication.run(RestClientApplication.class,a);
   System.out.println("REST client invokes rest-order-service");
