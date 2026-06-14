@@ -1,6 +1,8 @@
 package com.example.restclient;
+
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
+import org.springframework.web.client.RestClient;
 
 @SpringBootApplication
 public class RestClientApplication {
