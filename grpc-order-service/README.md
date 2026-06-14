@@ -52,17 +52,28 @@ A. Run the GraphQL Client:
 cd graphql-client
 ```
 
-Architecture & Communication Flow
+## Architecture & Communication Flow
 Multiple protocols are used specifically for efficient data exchange:
 
-GraphQL: Provides flexible, client-driven queries for web/mobile frontends via a single endpoint.
+#GraphQL: 
+Provides flexible, client-driven queries for web/mobile frontends via a single endpoint.
 
-gRPC: Facilitates high-performance, binary communication between internal microservices using Protocol Buffers.
+#gRPC: 
+Facilitates high-performance, binary communication between internal microservices using Protocol Buffers.
 
-🛠 Troubleshooting
+## 🛠 Troubleshooting
 Address Already in Use: Ensure ports 8080 (GraphQL) and 9090 (gRPC) are free.
 
-gRPC Build Errors: If the grpc-client fails to find generated classes, run mvn clean compile in grpc-order-service first to trigger the Protobuf compiler.
+# gRPC Build Errors: 
+If the grpc-client fails to find generated classes, run 
+```bash
+mvn clean compile
+```
+in grpc-order-service first to trigger the Protobuf compiler.
 
-Connection Refused: Confirm the server applications are fully started before initiating requests from the client applications.
+# Connection Refused: 
+Confirm the server applications are fully started before initiating requests from the client applications.
+
+```bash
 mvn spring-boot:run
+```
