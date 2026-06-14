@@ -12,7 +12,8 @@ public class GraphqlOrderApplication {
   SpringApplication.run(GraphqlOrderApplication.class,a);
  }
  
- @Bean OrderController controller(){
+ @Bean 
+ OrderController controller(){
   return new OrderController();
  }
  
