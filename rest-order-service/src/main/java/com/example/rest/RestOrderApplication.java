@@ -6,8 +6,14 @@ import org.springframework.web.bind.annotation.*;
 @SpringBootApplication
 @RestController
 public class RestOrderApplication {
- public static void main(String[] a){SpringApplication.run(RestOrderApplication.class,a);}
- @GetMapping("/orders/{id}") public String order(@PathVariable String id){
+ 
+ public static void main(String[] a){
+  SpringApplication.run(RestOrderApplication.class,a);
+ }
+ 
+ @GetMapping("/orders/{id}") 
+ public String order(@PathVariable String id){
   return "REST Order Response: "+id;
  }
+ 
 }
