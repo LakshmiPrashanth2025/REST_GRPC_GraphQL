@@ -22,6 +22,7 @@ This project demonstrates a multi-protocol microservices architecture using **Sp
 Navigate to the root directory and build all modules to generate the necessary gRPC stubs and project artifacts:
 ```bash
 mvn clean install
+```
 
 
 
@@ -30,21 +31,26 @@ You must start the servers before the clients. Open separate terminals for each:
 
 A. Start the GraphQL Server:
 
+```bash
 cd graphql-order-service
 mvn spring-boot:run
+```
 
 B. Start the gRPC Server:
 
+```bash
 cd grpc-order-service
 mvn spring-boot:run
+```
 
 3. Start the Clients
 Once the servers are running, start the clients in new terminal windows:
 
 A. Run the GraphQL Client:
 
+```bash
 cd graphql-client
-
+```
 
 Architecture & Communication Flow
 Multiple protocols are used specifically for efficient data exchange:
