@@ -7,9 +7,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class GraphqlOrderApplication {
- public static void main(String[] a){SpringApplication.run(GraphqlOrderApplication.class,a);}
- @Bean OrderController controller(){return new OrderController();}
- static class OrderController {
-  @QueryMapping public String order(){return "GraphQL Order Response";}
+ 
+ public static void main(String[] a){
+  SpringApplication.run(GraphqlOrderApplication.class,a);
  }
+ 
+ @Bean OrderController controller(){
+  return new OrderController();
+ }
+ 
+ static class OrderController {
+  
+  @QueryMapping 
+  public String order(){
+   return "GraphQL Order Response";
+  }
+  
+ }
+ 
 }
