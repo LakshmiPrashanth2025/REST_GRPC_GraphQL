@@ -1,9 +1,16 @@
 syntax = "proto3";
-package orders;
+
+option java_multiple_files = true;
+package com.example.grpc;
 
 service OrderService {
- rpc GetOrder(OrderRequest) returns (OrderResponse);
+  rpc GetOrder (OrderRequest) returns (OrderResponse);
 }
 
-message OrderRequest { string id=1; }
-message OrderResponse { string message=1; }
+message OrderRequest {
+  string order_id = 1;
+}
+
+message OrderResponse {
+  string details = 1;
+}
