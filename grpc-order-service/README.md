@@ -1,16 +1,4 @@
-# REST_GRPC_GraphQL API Suite
 
-This project demonstrates a multi-protocol microservices architecture using **Spring Boot**, implementing **REST**, **gRPC**, and **GraphQL** to handle order processing.
-
----
-
-## 🏗️ Project Structure
-- `graphql-order-service`: GraphQL server (port 8080).
-- `grpc-order-service`: gRPC server (port 9090).
-- `graphql-client`: GraphQL client.
-- `grpc-client`: gRPC client.
-
----
 
 ##  Getting Started
 
@@ -29,14 +17,7 @@ mvn clean install
 ### 2. Start the Servers
 You must start the servers before the clients. Open separate terminals for each:
 
-A. Start the GraphQL Server:
-
-```bash
-cd graphql-order-service
-mvn spring-boot:run
-```
-
-B. Start the gRPC Server:
+A. Start the gRPC Server:
 
 ```bash
 cd grpc-order-service
@@ -49,14 +30,10 @@ Once the servers are running, start the clients in new terminal windows:
 A. Run the GraphQL Client:
 
 ```bash
-cd graphql-client
+cd grpc-client
 ```
 
 ## Architecture & Communication Flow
-Multiple protocols are used specifically for efficient data exchange:
-
-#GraphQL: 
-Provides flexible, client-driven queries for web/mobile frontends via a single endpoint.
 
 #gRPC: 
 Facilitates high-performance, binary communication between internal microservices using Protocol Buffers.
